@@ -920,6 +920,14 @@
     ]
   },
   {
+    "name": "punchReplacesSwingPacket",
+    "description": "the serverbound swing (arm_animation) packet was removed; the client sends the empty punch packet for a main-hand attack swing instead",
+    "versions": [
+      "26.3",
+      "latest"
+    ]
+  },
+  {
     "name": "quickMoveClickSendsEmptyItem",
     "description": "the server accepts a quick-move (mode 1) window click only if the packet's item is empty; earlier versions expect the moved stack",
     "versions": [
