@@ -1,0 +1,23 @@
+{
+  "name": "minecraft-data",
+  "version": "3.117.0-pcx.1",
+  "description": "PCX-Network build of minecraft-data (PrismarineJS/minecraft-data + the node-minecraft-data loader) installable straight from git, with pc 26.2/26.3 data",
+  "main": "node/index.js",
+  "types": "node/index.d.ts",
+  "scripts": {
+    "generate:data": "node node/bin/generate_data.js"
+  },
+  "files": [
+    "node/",
+    "data/",
+    "schemas/",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PCX-Network/minecraft-data.git"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
