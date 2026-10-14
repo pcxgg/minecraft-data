@@ -3513,8 +3513,9 @@
    # MC: ServerboundAttackPacket
    packet_attack:
       entityId: varint
-   # MC: ServerboundPunchPacket (replaces ServerboundSwingPacket in 26.3, empty payload)
-   packet_punch: void
+   # MC: ServerboundPunchPacket (replaces ServerboundSwingPacket in 26.3)
+   packet_punch:
+      # Empty
    # MC: ServerboundBlockEntityTagQueryPacket
    packet_query_block_nbt:
       transactionId: varint

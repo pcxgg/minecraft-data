@@ -10801,7 +10801,10 @@
             }
           ]
         ],
-        "packet_punch": "void",
+        "packet_punch": [
+          "container",
+          []
+        ],
         "packet_query_block_nbt": [
           "container",
           [
