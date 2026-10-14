@@ -1160,6 +1160,14 @@
     ]
   },
   {
+    "name": "swingAnimationPacket",
+    "description": "arm swings are sent with the clientbound swing_animation packet (entity, hand, animation type, duration); the animate packet's ids became 0 wake up, 1 critical hit, 2 magic critical hit",
+    "versions": [
+      "26.3",
+      "latest"
+    ]
+  },
+  {
     "name": "tabCompleteHasAToolTip",
     "description": "tab complete has a tool tip",
     "versions": [
