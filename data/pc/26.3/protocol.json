@@ -10801,15 +10801,6 @@
             }
           ]
         ],
-        "packet_spectate_entity": [
-          "container",
-          [
-            {
-              "name": "entityId",
-              "type": "varint"
-            }
-          ]
-        ],
         "packet_punch": "void",
         "packet_query_block_nbt": [
           "container",
@@ -11918,28 +11909,7 @@
           [
             {
               "name": "entityId",
-              "type": [
-                "option",
-                "varint"
-              ]
-            }
-          ]
-        ],
-        "packet_arm_animation": [
-          "container",
-          [
-            {
-              "name": "hand",
-              "type": [
-                "mapper",
-                {
-                  "type": "varint",
-                  "mappings": {
-                    "0": "main_hand",
-                    "1": "off_hand"
-                  }
-                }
-              ]
+              "type": "optvarint"
             }
           ]
         ],
@@ -12152,7 +12122,7 @@
                     "0x3c": "update_structure_block",
                     "0x3d": "set_test_block",
                     "0x3e": "update_sign",
-                    "0x3f": "arm_animation",
+                    "0x3f": "spectator_action",
                     "0x40": "spectate",
                     "0x41": "test_instance_block_action",
                     "0x42": "block_place",
@@ -12232,7 +12202,7 @@
                     "update_structure_block": "packet_update_structure_block",
                     "set_test_block": "packet_set_test_block",
                     "update_sign": "packet_update_sign",
-                    "arm_animation": "packet_arm_animation",
+                    "spectator_action": "packet_spectator_action",
                     "spectate": "packet_spectate",
                     "test_instance_block_action": "packet_test_instance_block_action",
                     "block_place": "packet_block_place",

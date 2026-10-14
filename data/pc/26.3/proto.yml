@@ -3513,8 +3513,7 @@
    # MC: ServerboundAttackPacket
    packet_attack:
       entityId: varint
-   packet_spectate_entity:
-      entityId: varint
+   # MC: ServerboundPunchPacket (replaces ServerboundSwingPacket in 26.3, empty payload)
    packet_punch: void
    # MC: ServerboundBlockEntityTagQueryPacket
    packet_query_block_nbt:
@@ -3854,13 +3853,9 @@
       text3: string
       text4: string
    # MC: ServerboundSpectatorActionPacket
+   # entityId uses vanilla's OPTIONAL_VAR_INT sentinel encoding: raw varint, 0 = absent, n = entity id (n - 1).
    packet_spectator_action:
-      entityId?: varint
-   # MC: ServerboundSwingPacket
-   packet_arm_animation:
-      hand: varint =>
-         - main_hand
-         - off_hand
+      entityId: optvarint
    # MC: ServerboundTeleportToEntityPacket
    packet_spectate:
       target: UUID
@@ -3962,7 +3957,7 @@
       - update_structure_block
       - set_test_block
       - update_sign
-      - arm_animation
+      - spectator_action
       - spectate
       - test_instance_block_action
       - block_place
@@ -4032,7 +4027,7 @@
          if update_structure_block: packet_update_structure_block
          if set_test_block: packet_set_test_block
          if update_sign: packet_update_sign
-         if arm_animation: packet_arm_animation
+         if spectator_action: packet_spectator_action
          if spectate: packet_spectate
          if test_instance_block_action: packet_test_instance_block_action
          if block_place: packet_block_place
